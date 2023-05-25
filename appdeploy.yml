@@ -21,7 +21,7 @@
            
       
     - name: Download Template
-      command: wget  https://github.com/gvenkatx/easyTravel-OpenShift/blob/master/templates/easytravel-deployment.yml
+      command: git clone  https://github.com/gvenkatx/easyTravel-OpenShift/
       
     - name: Wait for 15 seconds
       pause:
