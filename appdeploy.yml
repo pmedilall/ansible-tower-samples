@@ -29,7 +29,7 @@
       
       
     - name: Deploy App from Template
-      command: oc create -f /home/lab-user/easytravel-deployment.yml
+      command: oc create -f /home/lab-user/easyTravel-OpenShift/templates/easytravel-deployment.yml
       
     - name: Wait for 15 seconds
       pause:
