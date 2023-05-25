@@ -21,7 +21,7 @@
            
       
     - name: Clone App Repository
-      command: git clone https://github.com/gvenkatx/easyTravel-OpenShift
+      command: git clone https://github.com/gvenkatx/easyTravel-OpenShift/blob/master/templates/easytravel-deployment.yml
       
     - name: Wait for 15 seconds
       pause:
