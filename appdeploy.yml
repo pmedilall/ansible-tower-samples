@@ -20,8 +20,8 @@
       become: true
            
       
-    - name: Clone App Repository
-      command: git clone https://github.com/gvenkatx/easyTravel-OpenShift/blob/master/templates/easytravel-deployment.yml
+    - name: Download Template
+      command: wget  https://github.com/gvenkatx/easyTravel-OpenShift/blob/master/templates/easytravel-deployment.yml
       
     - name: Wait for 15 seconds
       pause:
@@ -29,7 +29,7 @@
       
       
     - name: Deploy App from Template
-      command: oc create -f /home/lab-user/easyTravel-OpenShift/templates/easytravel-deployment.yml
+      command: oc create -f /home/lab-user/easytravel-deployment.yml
       
     - name: Wait for 15 seconds
       pause:
