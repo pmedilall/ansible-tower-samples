@@ -23,9 +23,9 @@
     - name: Download Template
       command: git clone  https://github.com/gvenkatx/easyTravel-OpenShift/
       
-    - name: Wait for 15 seconds
+    - name: Wait for 30 seconds
       pause:
-        seconds: 15
+        seconds: 30
       
       
     - name: Deploy App from Template
@@ -39,9 +39,9 @@
       command: oc new-app dynatrace-easytravel
       
   
-    - name: Wait for 30 seconds
+    - name: Wait for 15 seconds
       pause:
-        seconds: 30
+        seconds: 15
 
     - name: Notify Slack channel
       slack:
