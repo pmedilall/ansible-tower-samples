@@ -43,9 +43,16 @@
         seconds: 30
       
       
-    - name: Deploy App from Template
-      command: oc create -f /home/lab-user/easyTravel-OpenShift/templates/easytravel-deployment.yml
-      
+#    - name: Deploy App from Template
+ #     command: oc create -f /home/lab-user/easyTravel-OpenShift/templates/easytravel-deployment.yml
+ 
+ 
+    - name: Create EasyTravel deployment
+      ansible.builtin.command:
+        cmd: oc create -f /home/lab-user/easyTravel-OpenShift/templates/easytravel-deployment.yml
+      become: true
+
+       
     - name: Wait for 15 seconds
       pause:
         seconds: 15    
