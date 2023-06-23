@@ -1,6 +1,12 @@
 ---
 - name: Create and Apply Network Policy to Block All Traffic in and out of a Pod
-  hosts: localhost
+  hosts: all
+  connection: ssh
+  
+  tasks:
+    - name: Login to OpenShift cluster
+      command: oc login -u opentlc-mgr -p ul0ZZ1fyFdthQJrEf https://api.cluster-rbhdz.rbhdz.sandbox185.opentlc.com:6443
+      
   tasks:
     - name: Create Network Policy Definition
       blockinfile:
@@ -13,7 +19,7 @@
           spec:
             podSelector:
               matchLabels:
-                app: isolated-pod
+                app: log4shell-app
             policyTypes:
               - Ingress
               - Egress
@@ -22,3 +28,8 @@
             egress:
               - {}
 
+
+    - name: Apply Network Policy
+      shell: oc apply -f network-policy.yaml
+      args:
+        executable: /bin/bash
