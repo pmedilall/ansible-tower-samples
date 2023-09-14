@@ -9,7 +9,7 @@
       command: oc login -u admin -p openshift https://api.cluster-xjp9c.xjp9c.sandbox1854.opentlc.com:6443
      
     - name: Scale deployment
-      command: oc scale deployment easytravel-www -n easytravel --replicas=1
+      command: oc scale dc easytravel-www -n easytravel --replicas=1
       
     - name: Notify Slack channel
       slack:
