@@ -15,5 +15,5 @@
       slack:
        token: "T0508SWKB2N/B04V8C4P6A3/fr3b7rtyxJrZgjuRqQ1UCT1d"
        channel: "#devops"
-       msg: "*Processing remediation Workflow. Please wait 5 minutes for the DB to come up*"  
+       msg: "*Processing remediation Workflow. Application connectivity has been restored*"  
       
