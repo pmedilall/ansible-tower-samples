@@ -28,7 +28,7 @@
            
       
     - name: Download Template
-      command: git clone  https://github.com/gvenkatx/easyTravel-OpenShift/
+      command: git clone  https://github.com/pmedilall/easyTravel-OpenShift
       
     - name: Wait for 10 seconds
       pause:
@@ -36,12 +36,12 @@
       
       
 #    - name: Deploy App from Template
- #     command: oc create -f /home/lab-user/easyTravel-OpenShift/templates/easytravel-deployment.yml
+ #     command: oc create -f /home/lab-user/easyTravel-OpenShift/templates/easytravel.yml
  
  
     - name: Create EasyTravel deployment
       ansible.builtin.command:
-        cmd: oc create -f /home/lab-user/easyTravel-OpenShift/templates/easytravel-deployment.yml
+        cmd: oc create -f /home/lab-user/easyTravel-OpenShift/templates/easytravel.yml
       become: true
 
        
