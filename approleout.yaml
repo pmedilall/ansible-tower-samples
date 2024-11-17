@@ -41,7 +41,7 @@
  
     - name: Create EasyTravel deployment
       ansible.builtin.command:
-        cmd: oc create -f /home/lab-user/easyTravel-OpenShift/templates/easytravel.yml
+        cmd: oc create -f /home/lab-user/easyTravel-OpenShift/templates/easytravel-with-loadgen.yml
       become: true
 
        
