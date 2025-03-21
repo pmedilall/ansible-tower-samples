@@ -9,7 +9,7 @@
   tasks:
 
     - name: 
-      command: oc login -u kubedmin -p yDS7q-tYP4Q-UJpwq-4Zcas https://api.dcompsgai.dcom-psg-lab.xyz:6443
+      command: oc login -u kubedmin -p yDS7q-tYP4Q-UJpwq-4Zcas https://api.dcompsgai.dcom-psg-lab.xyz:6443 --insecure-skip-tls-verify
     - name: Get pods using oc command
       command: oc get pods -n {{ namespace }}
       register: pod_output
