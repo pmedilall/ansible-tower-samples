@@ -16,7 +16,7 @@
 
     - name: Pause for 20 seconds
       pause:
-        seconds: 10  
+        seconds: 15  
 
     - name: Show raw output
       debug:
