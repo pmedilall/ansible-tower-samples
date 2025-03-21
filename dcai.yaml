@@ -14,6 +14,10 @@
       command: oc get pods -n {{ namespace }}
       register: pod_output
 
+    - name: Pause for 20 seconds
+      pause:
+        seconds: 10  
+
     - name: Show raw output
       debug:
         var: pod_output.stdout_lines
